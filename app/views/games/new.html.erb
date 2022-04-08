@@ -1,0 +1,10 @@
+<h1>New Game....Let's Start</h1>
+<div id="randomLetters"><%= @letters %></div>
+<br>
+<p>What is the logest word you can find?</p>
+<form action="score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters %>
+  <input type="text" name="word">
+  <input type="submit" value="Play:)">
+</form>
